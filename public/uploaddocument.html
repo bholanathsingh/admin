@@ -1,0 +1,32 @@
+
+<div class="container">
+
+
+<br>
+
+        <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <select ng-model="Document.DocumentType" class="form-control " name="document">
+                    <option value="">Document Type</option>
+                    <option value="category">Category</option>
+                    <option value="company">Company</option>
+                    <option value="locality">Locality</option>
+                    <option value="keyword">Keyword</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <input type="file" id="file" class="form-control" />
+        </div>
+        <div class="col-sm-3">
+            <input type="submit" class="btn submit-btn pull-left"  ng-click="Process()" value="{{SubmitText}}"/>
+        </div>
+        <div class="col-sm-3">
+            <p style="color: red" ng-if="Message!=''"><h4><b>{{Message}}</b></h4>  </p>
+        </div>
+        </div>
+      <div ng-show="finalresult.length">{{finalresult}}</div>
+
+</div>
+

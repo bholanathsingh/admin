@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-8"> </div>
+    <div class="col-sm-4">
+
+        <form novalidate name="f1" class="register-form form-open" ng-submit="login()">
+
+            <p class="text-warning">{{error_message}}</p>
+
+            <br />
+
+            <div  class="form-group" ng-class="{ 'has-error' : f1.name.$invalid && (f1.name.$dirty || submitted)}">
+                <input type="text" class="form-control" ng-model="user.username" placeholder="Email / Mobile" name="name" ng-class="submitted?'ng-dirty':''"  ng-required="true" ng-maxlength="30" />
+                <p class="help-block" ng-show="(f1.name.$dirty || submitted) && f1.name.$error.required">Enter User Name !</p>
+            </div>
+
+            <div class="form-group"  ng-class="{ 'has-error' : f1.password.$invalid && (f1.password.$dirty || submitted)}">
+                <input type="password" class="form-control" ng-model="user.password" placeholder="Password" name="password" ng-class="submitted?'ng-dirty':''" ng-required="true" ng-minlength="6" ng-maxlength="30" />
+                <p class="help-block" ng-show="(f1.password.$dirty || submitted) && f1.password.$error.required">Enter Password !</p>
+            </div>
+
+
+          <p class="message message2"><a href="/forgotpassword">Forgot password?</a></p>
+            <input type="submit" class="btn submit-btn pull-right" value="Login" />
+           <p class="message">Not registered? <a href="/register">Create an account</a></p>
+
+           <!-- <p>
+                <i class="fa fa-google"><a class="navbar-text" href="/auth/login/google" target="_self">Google Login</a></i>
+                <i class="fa fa-linkedin"><a class="navbar-text" href="/auth/login/linkedin" target="_self">Linkedin Login</a></i>
+                <i class="fa fa-facebook"><a class="navbar-text" href="/auth/login/facebook" target="_self">Facebok Login</a></i>
+            </p> -->
+
+        </form>
+
+
+
+    </div>
+</div>
+
+
+
